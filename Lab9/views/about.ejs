@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О нас — Наши игрушки</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <span class="header__logo">Наши игрушки</span>
+            <nav class="header__nav">
+                <a href="/" class="nav-link">Каталог</a>
+                <a href="/about" class="nav-link active">О нас</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="about">
+            <h1 class="about__title">О нашем магазине</h1>
+            <p class="about__text">
+                Добро пожаловать в <strong>Наши игрушки</strong> — онлайн-каталог игрушек для детей всех возрастов.
+                Здесь вы можете просматривать, добавлять, редактировать и удалять товары.
+            </p>
+            <p class="about__text">
+                Приложение построено на <strong>Node.js + Express</strong>, использует шаблонизатор
+                <strong>EJS</strong> и хранит данные в <code>db.json</code>.
+            </p>
+            <div class="about__stack">
+                <span class="badge">Node.js</span>
+                <span class="badge">Express</span>
+                <span class="badge">EJS</span>
+                <span class="badge">REST API</span>
+            </div>
+            <a href="/" class="btn btn--primary" style="margin-top:2rem;display:inline-block;">← Вернуться в каталог</a>
+        </section>
+    </main>
+
+</body>
+
+</html>

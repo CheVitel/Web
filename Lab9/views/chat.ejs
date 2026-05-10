@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чат — Наши игрушки</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <span>Наши игрушки</span>
+            <nav>
+                <a href="/" class="nav-link">Каталог</a>
+                <a href="/about" class="nav-link">О нас</a>
+                <a href="/chat" class="nav-link active">Чат</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Экран входа -->
+    <div class="join-screen" id="joinScreen">
+        <div class="join-box">
+            <h2 class="join-box__title">Добро пожаловать в чат!</h2>
+            <p class="join-box__sub">Введите ваше имя, чтобы начать общение</p>
+            <input class="modal__input" id="usernameInput" type="text"
+                   placeholder="Ваше имя…" maxlength="30" />
+            <button class="btn" id="joinBtn" style="margin-top:.7rem;width:100%;">Войти</button>
+        </div>
+    </div>
+
+    <!-- Основной интерфейс чата -->
+    <div class="chat-layout hidden" id="chatLayout">
+
+        <aside class="chat-sidebar">
+            <div class="chat-sidebar__title">Участники</div>
+            <ul class="users-list" id="usersList"></ul>
+        </aside>
+
+        <section class="chat-main">
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <div class="chat-form">
+                <label class="file-btn" title="Прикрепить файл">
+                    📎
+                    <input type="file" id="fileInput" accept="image/*,.pdf,.doc,.docx,.txt" />
+                </label>
+                <input class="modal__input chat-form__input" id="messageInput"
+                       type="text" placeholder="Введите сообщение…" />
+                <button class="btn" id="sendBtn">Отправить</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chat.js"></script>
+</body>
+
+</html>

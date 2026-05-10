@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Наши игрушки</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <span>Наши игрушки</span>
+            <nav>
+                <a href="/" class="nav-link active">Каталог</a>
+                <a href="/about" class="nav-link">О нас</a>
+                <a href="/chat" class="nav-link">Чат</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="hero">
+            <button class="btn btn--primary" id="addBtn">Добавить игрушку</button>
+        </section>
+
+        <div class="controls">
+            <input class="modal__input" type="text" id="searchInput" placeholder="Поиск по названию…" />
+            <select class="modal__input" id="sortSelect">
+                <option value="none">Без сортировки</option>
+                <option value="asc">Название А → Я</option>
+                <option value="desc">Название Я → А</option>
+            </select>
+        </div>
+
+        <section class="catalog" id="catalog">
+            <div class="catalog__loading">Загрузка…</div>
+        </section>
+
+        <div class="pagination" id="pagination"></div>
+
+    </main>
+
+    <div class="modal-overlay hidden" id="modalOverlay">
+        <div class="modal" id="modal">
+            <h2 class="modal__title" id="modalTitle">Добавить игрушку</h2>
+
+            <label class="modal__label">Название
+                <input class="modal__input" type="text" id="fieldName" placeholder="Например: Кубики Lego" />
+            </label>
+            <label class="modal__label">Описание
+                <textarea class="modal__input modal__textarea" id="fieldDesc"
+                    placeholder="Краткое описание товара"></textarea>
+            </label>
+            <label class="modal__label">Цена ($)
+                <input class="modal__input" type="number" id="fieldPrice" placeholder="0" min="0" />
+            </label>
+
+            <div class="modal__actions">
+                <button class="btn btn--secondary" id="cancelBtn">Отмена</button>
+                <button class="btn btn--primary" id="saveBtn">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>
